@@ -183,10 +183,11 @@ header i img{
         background-color: #000000;
         color: white;
     }
-    article:hover{
+    
+}
+@media (prefers-color-scheme: dark) and (hover: hover) {
+    .products article:hover{
         color: purple;
         border: 1px solid purple;
     }
-    
-    
 }
