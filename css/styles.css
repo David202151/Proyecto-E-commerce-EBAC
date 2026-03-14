@@ -62,6 +62,10 @@ header i img{
 .products article{
     cursor: pointer;
     text-align: center;
+    margin: 20px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    transition: all 0.3s ease;
 }
 .products img{
     width: 200px;
@@ -188,6 +192,17 @@ header i img{
 @media (prefers-color-scheme: dark) and (hover: hover) {
     .products article:hover{
         color: purple;
-        border: 1px solid purple;
+        border-color: purple;
+    }
+    .products article{
+        cursor: pointer;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+    .products article img{
+        border-radius: 20px;
+    }
+    .products article{
+        margin: 20px;
     }
 }
