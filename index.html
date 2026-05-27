@@ -7,115 +7,175 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/functions.js" defer></script> 
     <title>Tienda GYMSHART</title>
 </head>
 <body>
-    <header>
-        <i>
-            <img src="img/Gymshark-menu.png" alt="Icono Menu">
-        </i>
-        <img src="img/gymshark-logo.png" alt="Logo GYMSHART">
-        <i>
-            <img src="img/carrito.png" alt="Icono Carrito">
-        </i>
+    <!-- HEADER -->
+    <header class="header">
+        <button class="header__menu-btn menu-icon" aria-label="Abrir menú">
+            <img src="img/menu.svg" alt="Icono Menú" class="header__icon">
+        </button>
+
+        <img src="img/gymshark-logo.png" alt="Logo GYMSHARK" class="header__logo">
+
+        <button class="header__cart-btn cart-icon" aria-label="Abrir carrito">
+            <span class="header__cart-count cart-count">0</span>
+            <img src="img/carrito.png" alt="Icono Carrito" class="header__icon">
+        </button>
     </header>
-    <main>
-        <section class="banner">
-            <h2>Productos Nuevos</h2>
-            <p>Conoce nuestros productos nuevos</p>
-        </section>
-        <section class="products">
-            <article>
-                <img src="img/oversize.png" alt="">
-                <h3>Oversize</h3>
-                <p>$50 USD</p>
-            </article>
 
-            <article>
-                <img src="img/camisa-compresion.jpg" alt="">
-                <h3>Camisa de compresion</h3>
-                <p>$40 USD</p>
-            </article>
+    <!-- MENÚ LATERAL -->
+    <nav class="nav-menu menu">
+        <button class="nav-menu__close-btn">
+            <img src="img/close.svg" alt="Cerrar Menú" class="close">
+        </button>
 
-            <article>
-                <img src="img/short.jpg" alt="">
-                <h3>Short</h3>
-                <p>$30 USD</p>
-            </article>
-            <article>
-                <img src="img/oversize.png" alt="">
-                <h3>Oversize</h3>
-                <p>$50 USD</p>
-            </article>
+        <div class="nav-menu__brand">
+            <h1 class="nav-menu__title">GYMSHARK</h1>
+            <p class="nav-menu__subtitle">Ropa deportiva de alta calidad</p>
+        </div>
 
-            <article>
-                <img src="img/camisa-compresion.jpg" alt="">
-                <h3>Camisa de compresion</h3>
-                <p>$40 USD</p>
-            </article>
+        <ul class="nav-menu__list">
+            <li class="nav-menu__item">
+                <button class="nav-menu__btn opciones-menu">
+                    <img src="img/home.svg" alt="Inicio" class="nav-menu__btn-icon">
+                    Inicio
+                </button>
+            </li>
+            <li class="nav-menu__item">
+                <button class="nav-menu__btn opciones-menu">
+                    <img src="img/oversize.svg" alt="Oversize" class="nav-menu__btn-icon">
+                    Oversizes
+                </button>
+            </li>
+            <li class="nav-menu__item">
+                <button class="nav-menu__btn opciones-menu">
+                    <img src="img/camisa-compresion.svg" alt="Camisa" class="nav-menu__btn-icon">
+                    Camisas de compresión
+                </button>
+            </li>
+            <li class="nav-menu__item">
+                <button class="nav-menu__btn opciones-menu">
+                    <img src="img/accesorios.svg" alt="Accesorios" class="nav-menu__btn-icon">
+                    Accesorios
+                </button>
+            </li>
+            <li class="nav-menu__item">
+                <button class="nav-menu__btn opciones-menu">
+                    <img src="img/shorts.svg" alt="Shorts" class="nav-menu__btn-icon">
+                    Shorts
+                </button>
+            </li>
+        </ul>
+    </nav>
 
-            <article>
-                <img src="img/short.jpg" alt="">
-                <h3>Short</h3>
-                <p>$30 USD</p>
-            </article>
-            <article>
-                <img src="img/oversize.png" alt="">
-                <h3>Oversize</h3>
-                <p>$50 USD</p>
-            </article>
+    <!-- BANNER -->
+    <section class="banner">
+        <div class="banner__content">
+            <h2 class="banner__title">Productos Nuevos</h2>
+            <p class="banner__subtitle">Conoce nuestros productos nuevos</p>
+        </div>
+    </section>
 
-            <article>
-                <img src="img/camisa-compresion.jpg" alt="">
-                <h3>Camisa de compresion</h3>
-                <p>$40 USD</p>
-            </article>
-
-            <article>
-                <img src="img/short.jpg" alt="">
-                <h3>Short</h3>
-                <p>$30 USD</p>
-            </article>
-            <article>
-                <img src="img/oversize.png" alt="">
-                <h3>Oversize</h3>
-                <p>$50 USD</p>
-            </article>
-
-            <article>
-                <img src="img/camisa-compresion.jpg" alt="">
-                <h3>Camisa de compresion</h3>
-                <p>$40 USD</p>
-            </article>
-
-            <article>
-                <img src="img/short.jpg" alt="">
-                <h3>Short</h3>
-                <p>$30 USD</p>
-            </article>
-        </section>
-
-        <section class="cart">
-            <h2>CARRITO</h2>
-            <div>
-                <img src="img/oversize.png" alt="">
-                <p>Oversize</p>
-                <p>$ 50</p>
-                <i><img src="img/quitar-carrito.png" alt="Icono Quitar" class="delete-icon"></i>
+    <!-- PRODUCTOS -->
+    <section class="products">
+        <article class="products__card">
+            <div class="products__img-wrapper">
+                <img src="img/oversize.png" alt="Oversize" class="products__img">
             </div>
-            <div>
-                <img src="img/oversize.png" alt="">
-                <p>Oversize</p>
-                <p>$ 50</p>
-                <i><img src="img/quitar-carrito.png" alt="Icono Quitar" class="delete-icon"></i>
+            <div class="products__info">
+                <h3 class="products__name">Oversize</h3>
+                <p class="products__price">$50 USD</p>
+                <button class="products__btn add-cart">Agregar al carrito</button>
             </div>
-            <div>
-                <img src="img/oversize.png" alt="">
-                <p>Oversize</p>
-                <p>$ 50</p>
-                <i><img src="img/quitar-carrito.png" alt="Icono Quitar" class="delete-icon"></i>
+        </article>
+        <article class="products__card">
+            <div class="products__img-wrapper">
+                <img src="img/camisa-compresion.jpg" alt="Camisa de compresión" class="products__img">
             </div>
-        </section>
-    </main>
-</body>
+            <div class="products__info">
+                <h3 class="products__name">Camisa de compresión</h3>
+                <p class="products__price">$40 USD</p>
+                <button class="products__btn add-cart">Agregar al carrito</button>
+            </div>
+        </article>
+        <article class="products__card">
+            <div class="products__img-wrapper">
+                <img src="img/short.jpg" alt="Short" class="products__img">
+            </div>
+            <div class="products__info">
+                <h3 class="products__name">Short</h3>
+                <p class="products__price">$30 USD</p>
+                <button class="products__btn add-cart">Agregar al carrito</button>
+            </div>
+        </article>
+        <article class="products__card">
+            <div class="products__img-wrapper">
+                <img src="img/oversize.png" alt="Oversize" class="products__img">
+            </div>
+            <div class="products__info">
+                <h3 class="products__name">Oversize</h3>
+                <p class="products__price">$50 USD</p>
+                <button class="products__btn add-cart">Agregar al carrito</button>
+            </div>
+        </article>
+        <article class="products__card">
+            <div class="products__img-wrapper">
+                <img src="img/camisa-compresion.jpg" alt="Camisa de compresión" class="products__img">
+            </div>
+            <div class="products__info">
+                <h3 class="products__name">Camisa de compresión</h3>
+                <p class="products__price">$40 USD</p>
+                <button class="products__btn add-cart">Agregar al carrito</button>
+            </div>
+        </article>
+        <article class="products__card">
+            <div class="products__img-wrapper">
+                <img src="img/short.jpg" alt="Short" class="products__img">
+            </div>
+            <div class="products__info">
+                <h3 class="products__name">Short</h3>
+                <p class="products__price">$30 USD</p>
+                <button class="products__btn add-cart">Agregar al carrito</button>
+            </div>
+        </article>
+        <article class="products__card">
+            <div class="products__img-wrapper">
+                <img src="img/oversize.png" alt="Oversize" class="products__img">
+            </div>
+            <div class="products__info">
+                <h3 class="products__name">Oversize</h3>
+                <p class="products__price">$50 USD</p>
+                <button class="products__btn add-cart">Agregar al carrito</button>
+            </div>
+        </article>
+        <article class="products__card">
+            <div class="products__img-wrapper">
+                <img src="img/camisa-compresion.jpg" alt="Camisa de compresión" class="products__img">
+            </div>
+            <div class="products__info">
+                <h3 class="products__name">Camisa de compresión</h3>
+                <p class="products__price">$40 USD</p>
+                <button class="products__btn add-cart">Agregar al carrito</button>
+            </div>
+        </article>
+        <article class="products__card">
+            <div class="products__img-wrapper">
+                <img src="img/short.jpg" alt="Short" class="products__img">
+            </div>
+            <div class="products__info">
+                <h3 class="products__name">Short</h3>
+                <p class="products__price">$30 USD</p>
+                <button class="products__btn add-cart">Agregar al carrito</button>
+            </div>
+        </article>
+    </section>
+
+    <!-- CARRITO -->
+    <aside class="cart">
+        <h2 class="cart__title">CARRITO</h2>
+    </aside>
+
+</body> 
 </html>
